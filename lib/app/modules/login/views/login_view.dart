@@ -1,3 +1,4 @@
+import 'package:belajar_1/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -13,11 +14,10 @@ class LoginView extends GetView<LoginController> {
         title: const Text('LoginView'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'LoginView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+      body:  Center(
+        child: ElevatedButton(onPressed: () {
+          Get.toNamed(Routes.HOME);
+        }, child: Text("pritt"))
       ),
     );
   }

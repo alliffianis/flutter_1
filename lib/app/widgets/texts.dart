@@ -84,55 +84,87 @@ class Texts {
     );
   }
 
-  static Text textL(
-    String text, {
-    FontWeights fontWeights = FontWeights.regular,
-  }) {
+  static Text textL(String text,
+      {FontWeights fontWeights = FontWeights.regular,
+      FontFamilies fontFamilies = FontFamilies.poppins}) {
     return Text(
       text,
-      style: TextStyle(
-        fontSize: 16,
-        fontWeight: _mapFontWeights(fontWeights),
-      ),
+      style: _mapFontFamilies(fontFamilies) == "Poppins"
+          ? GoogleFonts.poppins(
+              textStyle: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+              ),
+            )
+          : GoogleFonts.plusJakartaSans(
+              textStyle: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
     );
   }
 
-  static Text textM(
-    String text, {
-    FontWeights fontWeights = FontWeights.regular,
-  }) {
+  static Text textM(String text,
+      {FontWeights fontWeights = FontWeights.regular,
+      FontFamilies fontFamilies = FontFamilies.poppins}) {
     return Text(
       text,
-      style: TextStyle(
-        fontSize: 14,
-        fontWeight: _mapFontWeights(fontWeights),
-      ),
+      style: _mapFontFamilies(fontFamilies) == "Poppins"
+          ? GoogleFonts.poppins(
+              textStyle: const TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+              ),
+            )
+          : GoogleFonts.plusJakartaSans(
+              textStyle: const TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
     );
   }
 
-  static Text textS(
-    String text, {
-    FontWeights fontWeights = FontWeights.regular,
-  }) {
+  static Text textS(String text,
+      {FontWeights fontWeights = FontWeights.regular,
+      FontFamilies fontFamilies = FontFamilies.poppins}) {
     return Text(
       text,
-      style: TextStyle(
-        fontSize: 12,
-        fontWeight: _mapFontWeights(fontWeights),
-      ),
+      style: _mapFontFamilies(fontFamilies) == "Poppins"
+          ? GoogleFonts.poppins(
+              textStyle: const TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+              ),
+            )
+          : GoogleFonts.plusJakartaSans(
+              textStyle: const TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
     );
   }
 
-  static Text textXS(
-    String text, {
-    FontWeights fontWeights = FontWeights.regular,
-  }) {
+  static Text textXS(String text,
+      {FontWeights fontWeights = FontWeights.regular,
+      FontFamilies fontFamilies = FontFamilies.poppins}) {
     return Text(
       text,
-      style: TextStyle(
-        fontSize: 10,
-        fontWeight: _mapFontWeights(fontWeights),
-      ),
+      style: _mapFontFamilies(fontFamilies) == "Poppins"
+          ? GoogleFonts.poppins(
+              textStyle: const TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.w600,
+              ),
+            )
+          : GoogleFonts.plusJakartaSans(
+              textStyle: const TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
     );
   }
 

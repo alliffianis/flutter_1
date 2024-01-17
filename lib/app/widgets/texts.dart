@@ -105,9 +105,12 @@ class Texts {
     );
   }
 
-  static Text textM(String text,
-      {FontWeights fontWeights = FontWeights.regular,
-      FontFamilies fontFamilies = FontFamilies.poppins}) {
+  static Text textM(
+    String text, {
+    FontWeights fontWeights = FontWeights.regular,
+    FontFamilies fontFamilies = FontFamilies.poppins,
+    Color color = Colors.grey,
+  }) {
     return Text(
       text,
       style: _mapFontFamilies(fontFamilies) == "Poppins"
@@ -115,12 +118,14 @@ class Texts {
               textStyle: TextStyle(
                 fontSize: 14,
                 fontWeight: _mapFontWeights(fontWeights),
+                color: color,
               ),
             )
           : GoogleFonts.plusJakartaSans(
               textStyle: TextStyle(
                 fontSize: 14,
                 fontWeight: _mapFontWeights(fontWeights),
+                color: color,
               ),
             ),
     );

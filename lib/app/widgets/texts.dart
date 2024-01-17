@@ -31,7 +31,7 @@ class Texts {
       style: _mapFontFamilies(fontFamilies) == "Poppins"
           ? GoogleFonts.poppins(
               textStyle: const TextStyle(
-                fontSize: 36,
+                fontSize: 28,
                 fontWeight: FontWeight.w600,
               ),
             )
@@ -44,27 +44,43 @@ class Texts {
     );
   }
 
-  static Text headingM(
-    String text,
-  ) {
+  static Text headingM(String text,
+      {FontFamilies fontFamilies = FontFamilies.poppins}) {
     return Text(
       text,
-      style: const TextStyle(
-        fontSize: 20,
-        fontWeight: FontWeight.w600,
-      ),
+      style: _mapFontFamilies(fontFamilies) == "Poppins"
+          ? GoogleFonts.poppins(
+              textStyle: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w600,
+              ),
+            )
+          : GoogleFonts.plusJakartaSans(
+              textStyle: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
     );
   }
 
-  static Text headingS(
-    String text,
-  ) {
+  static Text headingS(String text,
+      {FontFamilies fontFamilies = FontFamilies.poppins}) {
     return Text(
       text,
-      style: const TextStyle(
-        fontSize: 18,
-        fontWeight: FontWeight.w600,
-      ),
+      style: _mapFontFamilies(fontFamilies) == "Poppins"
+          ? GoogleFonts.poppins(
+              textStyle: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+              ),
+            )
+          : GoogleFonts.plusJakartaSans(
+              textStyle: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
     );
   }
 

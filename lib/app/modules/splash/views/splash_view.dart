@@ -22,13 +22,13 @@ class SplashView extends GetView<SplashController> {
             'ini tulisan normal',
             style: TextStyle(fontSize: 20),
           ),
-          Texts.headingXL("Ini Hadding XL", fontFamilies: FontFamilies.plus),
+          Texts.headingXL("Ini Hadding XL", fontFamilies: FontFamilies.poppins),
           Texts.headingL(
             "Ini Hadding L",
             fontFamilies: FontFamilies.poppins,
           ),
-          Texts.headingM("Ini Hadding M"),
-          Texts.headingS("Ini Hadding S"),
+          Texts.headingM("Ini Hadding M", fontFamilies: FontFamilies.poppins),
+          Texts.headingS("Ini Hadding S", fontFamilies: FontFamilies.poppins),
           Texts.textL(
             "Ini Text L",
             fontWeights: FontWeights.bold,

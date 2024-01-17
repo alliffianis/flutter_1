@@ -91,15 +91,15 @@ class Texts {
       text,
       style: _mapFontFamilies(fontFamilies) == "Poppins"
           ? GoogleFonts.poppins(
-              textStyle: const TextStyle(
+              textStyle: TextStyle(
                 fontSize: 16,
-                fontWeight: FontWeight.w600,
+                fontWeight: _mapFontWeights(fontWeights),
               ),
             )
           : GoogleFonts.plusJakartaSans(
-              textStyle: const TextStyle(
+              textStyle: TextStyle(
                 fontSize: 16,
-                fontWeight: FontWeight.w600,
+                fontWeight: _mapFontWeights(fontWeights),
               ),
             ),
     );
@@ -112,15 +112,15 @@ class Texts {
       text,
       style: _mapFontFamilies(fontFamilies) == "Poppins"
           ? GoogleFonts.poppins(
-              textStyle: const TextStyle(
+              textStyle: TextStyle(
                 fontSize: 14,
-                fontWeight: FontWeight.w600,
+                fontWeight: _mapFontWeights(fontWeights),
               ),
             )
           : GoogleFonts.plusJakartaSans(
-              textStyle: const TextStyle(
+              textStyle: TextStyle(
                 fontSize: 14,
-                fontWeight: FontWeight.w600,
+                fontWeight: _mapFontWeights(fontWeights),
               ),
             ),
     );
@@ -133,15 +133,15 @@ class Texts {
       text,
       style: _mapFontFamilies(fontFamilies) == "Poppins"
           ? GoogleFonts.poppins(
-              textStyle: const TextStyle(
+              textStyle: TextStyle(
                 fontSize: 12,
-                fontWeight: FontWeight.w600,
+                fontWeight: _mapFontWeights(fontWeights),
               ),
             )
           : GoogleFonts.plusJakartaSans(
-              textStyle: const TextStyle(
+              textStyle: TextStyle(
                 fontSize: 12,
-                fontWeight: FontWeight.w600,
+                fontWeight: _mapFontWeights(fontWeights),
               ),
             ),
     );
@@ -154,15 +154,15 @@ class Texts {
       text,
       style: _mapFontFamilies(fontFamilies) == "Poppins"
           ? GoogleFonts.poppins(
-              textStyle: const TextStyle(
+              textStyle: TextStyle(
                 fontSize: 10,
-                fontWeight: FontWeight.w600,
+                fontWeight: _mapFontWeights(fontWeights),
               ),
             )
           : GoogleFonts.plusJakartaSans(
-              textStyle: const TextStyle(
+              textStyle: TextStyle(
                 fontSize: 10,
-                fontWeight: FontWeight.w600,
+                fontWeight: _mapFontWeights(fontWeights),
               ),
             ),
     );

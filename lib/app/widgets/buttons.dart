@@ -1,5 +1,6 @@
 import 'package:belajar_1/app/widgets/texts.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Buttons {
   static Widget buttonPrimary({
@@ -122,6 +123,90 @@ class Buttons {
       case ButtonSize.small:
         return "small";
     }
+  }
+
+  static Widget buttonOutline({
+    Function()? onPressed,
+    String? text,
+    Color textColor = Colors.black,
+    Color backgroundColor = Colors.white,
+    ButtonSize buttonSize = ButtonSize.medium,
+  }) {
+    return IntrinsicWidth(
+      child: ElevatedButton(
+        style: ButtonStyle(
+          padding: MaterialStateProperty.all<EdgeInsets>(
+            _mapButtonSize(buttonSize) == "medium"
+                ? const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 16,
+                  )
+                : const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 16,
+                  ),
+          ),
+          overlayColor: MaterialStateProperty.all<Color>(
+            const Color(0xffDBF1FF),
+          ),
+          backgroundColor: MaterialStateProperty.all<Color>(
+              onPressed == null ? Colors.grey : backgroundColor),
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(4),
+            ),
+          ),
+        ),
+        onPressed: onPressed,
+        child: Row(
+          children: [
+            Icon(
+              Icons.add,
+              color: textColor,
+              size: 14,
+            ),
+            const SizedBox(
+              width: 4,
+            ),
+            Texts.textM(
+              text ?? "",
+              fontWeights: FontWeights.medium,
+              fontFamilies: FontFamilies.poppins,
+              color: textColor,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  static Widget buttonTextss({
+    Function()? onTap,
+    String? text,
+    Color textColor = Colors.blue,
+    Color backgroundColor = Colors.white,
+    ButtonSize buttonSize = ButtonSize.medium,
+  }) {
+    return InkWell(
+      child: Row(
+        children: [
+          Icon(
+            Icons.add,
+            color: textColor,
+            size: 14,
+          ),
+          const SizedBox(
+            width: 4,
+          ),
+          Texts.textM(
+            text ?? "",
+            fontWeights: FontWeights.medium,
+            fontFamilies: FontFamilies.poppins,
+            color: textColor,
+          ),
+        ],
+      ),
+    );
   }
 }
 

@@ -72,6 +72,28 @@ class SplashView extends GetView<SplashController> {
                 );
               },
             ),
+            Buttons.buttonOutline(
+              text: "Button Outline",
+              buttonSize: ButtonSize.medium,
+              onPressed: () {
+                // Get.toNamed(Routes.HOME);
+                print(
+                  "object",
+                );
+              },
+            ),
+            Center(
+              child: Buttons.buttonTextss(
+                text: "Button Text",
+                // buttonSize: ButtonSize.medium,
+                onTap: () {
+                  // Get.toNamed(Routes.HOME);
+                  print(
+                    "object",
+                  );
+                },
+              ),
+            ),
           ],
         ),
       ),
